@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="est.css">
+	<title>Eventos con teclas</title>
+</head>
+
+
+<div class="c1" id="txt" style="color: black; font-size: 60px; font-family: Algerian; position: absolute; left: 23%; top: 30%;"><p class="p">Digite una palabra,<br> posteriomente digite "A", "B" o "C" para cambiar los estilos</p></div>
+<input type="text"  id="m" style=" margin-top: 50px;margin-left: 520px; height: 30px; width: 400px; position: absolute; left: 12%; top: 80%">	
+
+
+
+<body onkeypress="teclado()" style="background-color: rgb(55,162,198);">
+	<script>
+		function teclado()
+		{
+		
+			if (event.code=="KeyA")
+			 {
+	 			 var x = document.getElementById("txt");
+	 			 x.classList.add('c2');
+	 			 x.classList.remove('c1');
+	 			 x.classList.remove('c3');
+	 			 x.classList.remove('c4');
+	 			var m=document.getElementById('m').value;
+	 			document.getElementById('txt').innerHTML=m;
+
+  				
+			}
+			else
+			{}
+				
+								if (event.code=="KeyB")
+								 {
+			 					 var x1 = document.getElementById("txt");
+	 							 x1.classList.add('c3');	
+	 							 x1.classList.remove('c2');
+	 							 x1.classList.remove('c1');
+	 							 x1.classList.remove('c4');
+	 							 var m=document.getElementById('m').value;
+	 						     document.getElementById('txt').innerHTML=m;
+			 					
+									}
+									else
+									{}
+
+
+								       if (event.code=="KeyC")
+			 					       {
+			 						  		 var x2 = document.getElementById("txt");
+	 			 							x2.classList.add('c4');
+	 			 							x2.classList.remove('c1');
+	 			 							x2.classList.remove('c2');
+	 			 							x2.classList.remove('c3');
+	 			 						    var m=document.getElementById('m').value;
+	 						                document.getElementById('txt').innerHTML=m;
+			 						  		
+									}
+									else
+										{}	
+					
+				
+		}
+	</script>
+
+
+</body>
+</html>
